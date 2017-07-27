@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="watchtower.stain.GraphThree"
+    android:id="@+id/graph3layout"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:id="@+id/titleGraph3"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:background="@drawable/t3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+
+        <!-- ******************************** RONI **************************-->
+
+        <RelativeLayout
+            android:id="@+id/roniGridG3"
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_alignTop="@+id/tomGridG3"
+            android:layout_marginBottom="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/roniTextG3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/r1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/roniBar3"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center|bottom"
+                android:background="@color/bars"
+                android:layout_above="@+id/roniTextG3"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- ******************************** TOM **************************-->
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="36dp"
+            android:id="@+id/tomGridG3">
+
+            <ImageView
+                android:id="@+id/tomBar3"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/tomTextG3"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/tomTextG3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/t11"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- ******************************** SEAN **************************-->
+
+        <RelativeLayout
+            android:id="@+id/seanGridG3"
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="42dp"
+            android:layout_alignBottom="@+id/tomGridG3"
+            >
+
+
+            <ImageView
+                android:id="@+id/seanTextG3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:background="@drawable/s1"
+                android:layout_gravity="center|bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/seanBar3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/seanTextG3"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="550dp"
+            android:layout_height="2dp"
+            android:background="@drawable/underline"
+            android:layout_marginBottom="33dp"
+            android:layout_alignBottom="@+id/roniGridG3"
+            android:layout_centerHorizontal="true" />
+
+
+
+<!-- there shouldn't be a next question here...
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="nextQuestion"
+            android:layout_alignParentLeft="true"
+            >
+
+            <ImageButton
+                android:id="@+id/nextQuestion3"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:onClick="nextQuestion"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back"/>
+
+        </RelativeLayout>
+ -->
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="backQuestion3"
+            android:layout_alignParentRight="true"
+            >
+            <ImageButton
+                android:id="@+id/backQuestionFoo"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:onClick="backQuestion3"
+                android:background="@drawable/next"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:text="@string/credits"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@mipmap/watchtower"
+                ></ImageView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

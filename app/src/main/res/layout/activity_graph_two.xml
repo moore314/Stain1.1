@@ -1,0 +1,249 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="watchtower.stain.GraphTwo"
+    android:id="@+id/graph2layout"
+    >
+
+    <ImageView
+        android:id="@+id/titleGraph2"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:background="@drawable/t2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" ></ImageView>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+
+
+        <!-- ******************************** TEACHER **************************-->
+
+        <RelativeLayout
+            android:id="@+id/teacherGridG"
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_alignTop="@+id/parentsGridG"
+            android:layout_marginBottom="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/teacherTextG"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/teachertxt"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/teacherBar1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/teacherTextG"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- ******************************** PARENTS **************************-->
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:id="@+id/parentsGridG"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="36dp"
+            android:layout_alignTop="@+id/friendstsGridG"
+            android:layout_toRightOf="@+id/teacherGridG"
+            android:layout_toEndOf="@+id/teacherGridG">
+
+            <ImageView
+                android:id="@+id/parentBar1"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/parentTextG"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/parentTextG"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/parentstxt"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- ******************************** FRIENDS **************************-->
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:id="@+id/friendstsGridG"
+            android:layout_marginBottom="36dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/otherGridG"
+            android:layout_toStartOf="@+id/otherGridG">
+
+            <ImageView
+                android:id="@+id/friendsBar1"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/friendsTextG"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/friendsTextG"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/friendstxt"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+
+        <!-- *********************** OTHER ************************* -->
+
+        <RelativeLayout
+            android:id="@+id/otherGridG"
+            android:layout_width="80dp"
+            android:layout_height="250dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/parentsGridG"
+            >
+
+
+            <ImageView
+                android:id="@+id/otherTextG"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:background="@drawable/othertxt"
+                android:layout_gravity="center|bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"></ImageView>
+
+            <ImageView
+                android:id="@+id/otherBar1"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:background="@color/bars"
+                android:layout_gravity="center"
+                android:layout_above="@+id/otherTextG"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="550dp"
+            android:layout_height="2dp"
+            android:background="@drawable/underline"
+            android:layout_marginBottom="33dp"
+            android:layout_alignBottom="@+id/teacherGridG"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="nextQuestion"
+            android:layout_alignParentLeft="true"
+            >
+
+            <ImageButton
+                android:id="@+id/nextQuestion1"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:onClick="nextQuestion"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="backQuestion"
+            android:layout_alignParentRight="true"
+            >
+            <ImageButton
+                android:id="@+id/backQuestion1"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:onClick="backQuestion"
+                android:background="@drawable/next"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:text="@string/credits"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="3dp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@mipmap/watchtower"
+                ></ImageView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

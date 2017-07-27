@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="watchtower.stain.QuestionTwo"
+    android:id="@+id/q2layout">
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/titleQ2"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:background="@drawable/t2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"></ImageView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titleQ2"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                >
+            <!-- ***************** TEACHER ************************* -->
+
+            <GridLayout
+                android:id="@+id/teacherGridQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp">
+
+
+                <ImageView
+                    android:id="@+id/teacherName"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/teachertxt"
+                    android:onClick="chooseCharacter"></ImageView>
+
+
+                <ImageButton
+                    android:id="@+id/teacher"
+                    android:layout_width="75dp"
+                    android:layout_height="174dp"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_gravity="center"
+                    android:background="@drawable/teacher"
+                    android:onClick="chooseCharacter"
+
+                    ></ImageButton>
+
+
+
+            </GridLayout>
+
+            <!-- ************************* PARENTS ************************ -->
+
+            <GridLayout
+                    android:id="@+id/parentsGridQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    android:rowCount="2"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_alignTop="@+id/teacherGridQ"
+                    android:layout_toLeftOf="@+id/friendsGridQ"
+                    android:layout_toStartOf="@+id/friendsGridQ">
+
+                    <ImageView
+                        android:id="@+id/parentsName"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_row="1"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/parentstxt"
+                        android:onClick="chooseCharacter">
+
+                    </ImageView>
+
+                    <ImageButton
+                        android:id="@+id/parents"
+                        android:layout_width="120dp"
+                        android:layout_height="174dp"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:background="@drawable/parents"
+                        android:onClick="chooseCharacter"
+
+                        ></ImageButton>
+
+                </GridLayout>
+
+            <!-- ******************************* FRIENDS *********************** -->
+
+            <GridLayout
+                android:id="@+id/friendsGridQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:rowCount="2"
+                android:layout_alignTop="@+id/parentsGridQ"
+                android:layout_toLeftOf="@+id/otherGridQ"
+                android:layout_toStartOf="@+id/otherGridQ"
+                android:layout_marginRight="55dp"
+                android:layout_marginEnd="55dp">
+
+                <ImageButton
+                    android:id="@+id/friends"
+                    android:layout_width="120dp"
+                    android:layout_height="174dp"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_gravity="center"
+                    android:background="@drawable/friends"
+                    android:onClick="chooseCharacter"
+                    ></ImageButton>
+
+                <ImageView
+                    android:id="@+id/friendsName"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:layout_row="1"
+                    android:background="@drawable/friendstxt"
+                    android:layout_marginTop="20dp"
+                    android:onClick="chooseCharacter"
+                    ></ImageView>
+
+            </GridLayout>
+
+           <!-- ************************ OTHER ********************** -->
+
+           <GridLayout
+               android:id="@+id/otherGridQ"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:columnCount="1"
+               android:rowCount="2"
+               android:layout_marginRight="40dp"
+               android:layout_marginEnd="40dp"
+               android:layout_alignTop="@+id/parentsGridQ"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentEnd="true"
+               android:layout_alignBottom="@+id/friendsGridQ"
+               >
+
+               <ImageView
+                   android:id="@+id/otherName"
+                   android:layout_width="50dp"
+                   android:layout_height="35dp"
+                   android:layout_column="0"
+                   android:layout_gravity="center|bottom"
+                   android:layout_row="1"
+                   android:background="@drawable/othertxt"
+
+                   android:onClick="chooseCharacter">
+
+               </ImageView>
+
+               <ImageButton
+                   android:id="@+id/other"
+                   android:layout_width="60dp"
+                   android:layout_height="170dp"
+                   android:layout_column="0"
+                   android:layout_row="0"
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="bottom"
+                   android:background="@drawable/other"
+                   android:onClick="chooseCharacter"
+                   ></ImageButton>
+
+           </GridLayout>
+
+
+
+            </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="@string/credits"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="3dp"
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/watchtower"
+            ></ImageView>
+    </LinearLayout>
+</RelativeLayout>
